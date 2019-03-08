@@ -1,0 +1,52 @@
+<!--
+Created by Stephen Wagner, 8/12/2016
+Gmail Attachment Input GUI
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Gmail Attachment Input</title>
+    <script type="text/javascript">
+        // Include version 1 of the base GUI library.
+        document.write('<link rel="import" href="' + window.Alteryx.LibDir + '1/lib/alteryx/gui/includes.html">');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+
+<!-- Fieldset to capture user credentials -->   
+    <fieldset id="credentials" style="display:block">    
+      <legend>Enter Google Credentials and Search Parameters</legend>
+        <label>Client ID</label>
+          <alteryx-pluginwidget type="TextBox" id="client_id" dataName="client_id" onkeyup="enableConnect();"></alteryx-pluginwidget>
+          <br/>
+        <label>Client Secret</label>
+          <alteryx-pluginwidget type="TextBox" id="client_secret" dataName="client_secret" password="true"></alteryx-pluginwidget>
+          <br/>
+        <label>Refresh Token</label>
+          <alteryx-pluginwidget type="TextBox" id="refresh_token" dataName="refresh_token" password="true"></alteryx-pluginwidget>
+        <label>Search Parameters</label>
+          <alteryx-pluginwidget type="TextBox" id="search_parameters" dataName="search_parameters"></alteryx-pluginwidget>
+		  <br>
+          <div style='color: gray'>
+          	Search Parameter Tips:
+          	<ul>
+          		<li>Add search operators without quotes (ex. from:steve)</li>
+          		<li>Separate mulitple search operators with a space (ex. from:steve subject:report)</li>
+          	</ul>	
+          	Common Search Parameters:
+          	<ul>
+          		<li>has:attachment &mdash;<i> included automatically</i></li>
+          		<li>from:</li>
+          		<li>subject:</li>
+          		<li>filename:</li>
+          	</ul>
+			<a href="https://support.google.com/mail/answer/7190?hl=en" target="_blank" rel="noopener noreferrer">Additional Search Parameters</a>
+          </div>
+	</fieldset> 
+</body>

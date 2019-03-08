@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--All paths are relative to this config file.
+	The variables [Engine.EngineDirectory], [Engine.PluginDirectory]
+	and [Engine.JavaScriptPluginDirectory] can also be used-->
+<AlteryxJavaScriptPlugin>
+  <EngineSettings EngineDllEntryPoint="GmailAttachmentInput\Supporting_Macros\GmailAttachmentInput.yxmc" EngineDll="Macro" SDKVersion="10.1"/>
+  <GuiSettings Html="GmailAttachmentInputGui.html" Icon="GmailAttachmentInputIcon.png" SDKVersion="10.1" help="GmailAttachmentInput.htm">
+    <InputConnections>
+      <!--Connection Name="Input" AllowMultiple="False" Optional="False" Type="Connection" Label=""/-->
+    </InputConnections>
+    <OutputConnections>
+      <Connection Name="Output" AllowMultiple="False" Optional="False" Type="Connection" Label=""/>
+    </OutputConnections>
+  </GuiSettings>
+  <Properties>
+    <MetaInfo>
+      <NameIsFileName value="false" />
+      <Name>Gmail Attachment Input</Name>
+	  <Description><![CDATA[Allows you to programmatically download email attachments from a Gmail account.                                                              Beta v1.0.0.0]]></Description>
+      <RootToolName></RootToolName>
+      <ToolVersion>Beta 1.0.0.0</ToolVersion>
+      <ToolInDb value="False" />
+      <CategoryName>Connectors</CategoryName>
+      <SearchTags>cloud,connector,input,web,internet,gmail,google,email,attachment,connectors category,API,download,write</SearchTags>
+      <Author>Stephen Wagner, Sr. Content Engineer @ Alteryx</Author>
+      <Company>Alteryx, Inc.</Company>
+      <Copyright>2016 Alteryx, Inc.  All Rights Reserved.</Copyright>
+	  <DescriptionLink actual="" displayed="" />
+    </MetaInfo>
+  </Properties>
+</AlteryxJavaScriptPlugin>
